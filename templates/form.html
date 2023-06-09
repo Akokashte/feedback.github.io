@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}Form{% endblock title %}
+{% block body %}
+<div class="container">
+    <!-- Content here -->
+    <h2 class="text-center mt-4 ">Academics Details</h2>
+    <form action="/form" method="post">
+        {% csrf_token %}
+
+    <div class="mt-3">
+        <label for="exampleFormControlInput1 " class="form-label" >Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" value={{email}} name="email" readonly="readonly" required>
+    </div>
+
+    <label for="exampleFormControlInput1 " class="form-label mt-3">Branch *</label>
+    <select class="form-select" aria-label="Default select example" name="branch" required>
+        <option selected value="comp">Computer</option>
+        <!-- <option value="extc">Electronics</option>
+        <option value="mech">Mechanical</option>
+        <option value="chem">Chemical</option>
+        <option value="civil">Civil</option> -->
+    </select>
+
+    <label for="exampleFormControlInput1 " class="form-label mt-3">Class *</label>
+    <select class="form-select " aria-label="Default select example" name="class" required>
+        <option value="se">SE</option>
+        <option value="te">TE</option>
+        <option value="be">BE</option>
+    </select>
+    <label for="exampleFormControlInput1 " class="form-label mt-3">Semester *</label>
+    <select class="form-select " aria-label="Default select example" name="sem" required>
+        <option selected value="even">Even SEM</option>
+        <option value="odd">Odd SEM</option>
+    </select>
+
+    <label for="exampleFormControlInput1 " class="form-label mt-3">Choose *</label>
+    <select class="form-select " aria-label="Default select example" name="feedbacktype" required>
+        <option selected value="theory">Theory lecture Feedback</option>
+        <option value="practical">Practical Feedback</option>
+    </select>
+      
+      <button type="submit" class="btn btn-primary mt-3 mb-2">Submit</button>
+  </div>
+  </form>
+{% endblock %}

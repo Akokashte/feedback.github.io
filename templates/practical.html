@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% block title %}Feedback{% endblock title %}
+{% block body %}
+
+<div class="container-fluid px-0 mb-3 text-white" style="font-family: 'Baloo Da 2', cursive;">
+    <h2 class="text-center mt-3">{{myclass | upper }} {{sem | capfirst }} Semester Practical Feedback Form</h2>
+</div>
+
+<div class="container py-4 text-black" style="font-family: 'Baloo Da 2', cursive; font-size: 1.2rem;">
+    <form action="/practical" method="post">
+        {% csrf_token %}
+        {% for key,val in data.items %}
+        {% for j in val %}
+        <div class="card mx-auto" style="width: 15rem;">
+            <img src={{j.image}} class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Sub : </strong>{{j.subject}}</h5>
+                <p class="card-text fw-bold">{{j.teacher_name}}</p>
+            </div>
+        </div>
+
+        <label for="sel1" class="form-name mt-3 text-white">Are connections between practical work in practical classes and theoretical background during theory classes really happen?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel1" name="q1" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel2" class="form-name mt-3 text-white">Are the practical’s runs smoothly according to university syllabus?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel2" name="q2" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+
+        <label for="sel3" class="form-name mt-3 text-white">How approachable is the teacher in practical classes?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel3" name="q3" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel4" class="form-name mt-3 text-white">How well does the teacher succeed in stimulating and sustaining student’s interest in practical work?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel4" name="q4" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel5" class="form-name mt-3 text-white">How successful is the teacher in responding the questions and queries promptly and effectively?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel5" name="q5" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel6" class="form-name mt-3 text-white">How effective is the teacher in evaluating the practical work?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel6" name="q6" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel7" class="form-name mt-3 text-white">Overall, how you are satisfied with the conduct of practical’s?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel7" name="q7" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <div class="mb-3 mt-3">
+            <label for="exampleFormControlTextarea1" class="form-label text-white">Any suggestions</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="suggestion"></textarea>
+        </div>
+        {% endfor %}
+        {% endfor %}
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock body %}
+<!DOCTYPE html>

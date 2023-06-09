@@ -1,0 +1,432 @@
+{% extends 'base.html' %}
+{% block title %}Feedback SE Computer - Sem III{% endblock title %}
+{% block body %}
+
+<div class="container-fluid px-0 mb-3 text-white" style="font-family: 'Baloo Da 2', cursive;">
+    <h2 class="text-center mt-3">Semester Feedback Form</h2>
+    <h4 class="text-center mt-3">SE Computer - Sem III Theory</h4>
+</div>
+
+<div class="container py-4 text-black" style="font-family: 'Baloo Da 2', cursive; font-size: 1.2rem;">
+    <form action="/save_responses" method="post">
+        {% csrf_token %}
+
+        <input type="text" value="theory" name="form_type" hidden>
+        <input type="text" value="2022-23" name="academic_year" hidden>
+        <input type="text" value="iii" name="semester" hidden>
+        <input type="text" value="computer" name="branch" hidden>
+        <input type="text" value="se" name="year" hidden>
+
+        <!-- Subject No 1 -->
+        <div class="card mx-auto" style="width: 15rem;">
+            <img src='static/guravsir.png' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Sub : </strong>Engineering Mathematics - III</h5>
+                <input type="text" value="Engineering Mathematics - III" name="s1_subject_name" hidden>
+                <p class="card-text fw-bold">Prof. Vishwanath Gurav</p>
+                <input type="text" value="Prof. Vishwanath Gurav" name="s1_teacher_name" hidden>
+            </div>
+        </div>
+
+        <label for="sel1" class="form-name mt-3 text-white">Q1. Whether teaching is relevant to syllabus</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel1" name="s1_q1" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel2" class="form-name mt-3 text-white">Q2. Whether doubts are cleared properly</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel2" name="s1_q2" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+
+        <label for="sel3" class="form-name mt-3 text-white">Q3. Whether Notes are provided properly?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel3" name="s1_q3" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel4" class="form-name mt-3 text-white">Q4. Whether voice is clear ?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel4" name="s1_q4" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel5" class="form-name mt-3 text-white">Q5. Whether language is simple</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel5" name="s1_q5" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel6" class="form-name mt-3 text-white">Q6. Whether elearning resources are used properly</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel6" name="s1_q6" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel7" class="form-name mt-3 text-white">Q7. Overall impression of teacher</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel7" name="s1_q7" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <div class="mb-3 mt-3">
+            <label for="exampleFormControlTextarea1" class="form-label text-white">Any suggestions</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="s1_suggestion"></textarea>
+        </div>
+
+
+
+        <!-- Subject No 2 -->
+        <div class="card mx-auto" style="width: 15rem;">
+            <img src='static/rbpawar.jpg' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Sub : </strong>Discrete Structures and Graph Theory</h5>
+                <input type="text" value="Discrete Structures and Graph Theory" name="s2_subject_name" hidden>
+                <p class="card-text fw-bold">Prof. Rajkumar Pawar</p>
+                <input type="text" value="Prof. Rajkumar Pawar" name="s2_teacher_name" hidden>
+            </div>
+        </div>
+
+        <label for="sel1" class="form-name mt-3 text-white">Q1. Whether teaching is relevant to syllabus</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel1" name="s2_q1" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel2" class="form-name mt-3 text-white">Q2. Whether doubts are cleared properly</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel2" name="s2_q2" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+
+        <label for="sel3" class="form-name mt-3 text-white">Q3. Whether Notes are provided properly?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel3" name="s2_q3" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel4" class="form-name mt-3 text-white">Q4. Whether voice is clear ?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel4" name="s2_q4" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel5" class="form-name mt-3 text-white">Q5. Whether language is simple</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel5" name="s2_q5" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel6" class="form-name mt-3 text-white">Q6. Whether elearning resources are used properly</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel6" name="s2_q6" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel7" class="form-name mt-3 text-white">Q7. Overall impression of teacher</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel7" name="s2_q7" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <div class="mb-3 mt-3">
+            <label for="exampleFormControlTextarea1" class="form-label text-white">Any suggestions</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="s2_suggestion"></textarea>
+        </div>
+
+
+
+        <!-- Subject No 3 -->
+        <div class="card mx-auto" style="width: 15rem;">
+            <img src='static/krantimam.jpg' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Sub : </strong>Data Structure</h5>
+                <input type="text" value="Data Structure" name="s3_subject_name" hidden>
+                <p class="card-text fw-bold">Prof. Kranti Gajmal</p>
+                <input type="text" value="Prof. Kranti Gajmal" name="s3_teacher_name" hidden>
+            </div>
+        </div>
+
+        <label for="sel1" class="form-name mt-3 text-white">Q1. Whether teaching is relevant to syllabus</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel1" name="s3_q1" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel2" class="form-name mt-3 text-white">Q2. Whether doubts are cleared properly</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel2" name="s3_q2" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+
+        <label for="sel3" class="form-name mt-3 text-white">Q3. Whether Notes are provided properly?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel3" name="s3_q3" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel4" class="form-name mt-3 text-white">Q4. Whether voice is clear ?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel4" name="s3_q4" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel5" class="form-name mt-3 text-white">Q5. Whether language is simple</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel5" name="s3_q5" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel6" class="form-name mt-3 text-white">Q6. Whether elearning resources are used properly</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel6" name="s3_q6" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel7" class="form-name mt-3 text-white">Q7. Overall impression of teacher</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel7" name="s3_q7" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <div class="mb-3 mt-3">
+            <label for="exampleFormControlTextarea1" class="form-label text-white">Any suggestions</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="s3_suggestion"></textarea>
+        </div>
+
+
+
+        <!-- Subject No 4 -->
+        <div class="card mx-auto" style="width: 15rem;">
+            <img src='static/sameersir.jpg' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Sub : </strong>Digital Logic and Computer Architecture</h5>
+                <input type="text" value="Digital Logic and Computer Architecture" name="s4_subject_name" hidden>
+                <p class="card-text fw-bold">Prof. Sameer Tathare</p>
+                <input type="text" value="Prof. Sameer Tathare" name="s4_teacher_name" hidden>
+            </div>
+        </div>
+
+        <label for="sel1" class="form-name mt-3 text-white">Q1. Whether teaching is relevant to syllabus</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel1" name="s4_q1" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel2" class="form-name mt-3 text-white">Q2. Whether doubts are cleared properly</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel2" name="s4_q2" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+
+        <label for="sel3" class="form-name mt-3 text-white">Q3. Whether Notes are provided properly?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel3" name="s4_q3" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel4" class="form-name mt-3 text-white">Q4. Whether voice is clear ?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel4" name="s4_q4" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel5" class="form-name mt-3 text-white">Q5. Whether language is simple</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel5" name="s4_q5" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel6" class="form-name mt-3 text-white">Q6. Whether elearning resources are used properly</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel6" name="s4_q6" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel7" class="form-name mt-3 text-white">Q7. Overall impression of teacher</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel7" name="s4_q7" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <div class="mb-3 mt-3">
+            <label for="exampleFormControlTextarea1" class="form-label text-white">Any suggestions</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="s4_suggestion"></textarea>
+        </div>
+
+
+
+        <!-- Subject No 5 -->
+        <div class="card mx-auto" style="width: 15rem;">
+            <img src='static/ip.jpg' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Sub : </strong>Computer Graphics</h5>
+                <input type="text" value="Computer Graphics" name="s5_subject_name" hidden>
+                <p class="card-text fw-bold">Prof. Mahesh Khandke</p>
+                <input type="text" value="Prof. Mahesh Khandke" name="s5_teacher_name" hidden>
+            </div>
+        </div>
+
+        <label for="sel1" class="form-name mt-3 text-white">Q1. Whether teaching is relevant to syllabus</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel1" name="s5_q1" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel2" class="form-name mt-3 text-white">Q2. Whether doubts are cleared properly</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel2" name="s5_q2" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+
+        <label for="sel3" class="form-name mt-3 text-white">Q3. Whether Notes are provided properly?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel3" name="s5_q3" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel4" class="form-name mt-3 text-white">Q4. Whether voice is clear ?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel4" name="s5_q4" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel5" class="form-name mt-3 text-white">Q5. Whether language is simple</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel5" name="s5_q5" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel6" class="form-name mt-3 text-white">Q6. Whether elearning resources are used properly</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel6" name="s5_q6" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel7" class="form-name mt-3 text-white">Q7. Overall impression of teacher</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel7" name="s5_q7" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <div class="mb-3 mt-3">
+            <label for="exampleFormControlTextarea1" class="form-label text-white">Any suggestions</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="s5_suggestion"></textarea>
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock body %}

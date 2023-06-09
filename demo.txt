@@ -1,0 +1,12 @@
+Steps for Execution of website.
+
+step-1) Open terminal or powershell.
+step-2) Terminal/powershell should contain path of the project folder.
+step-3) Execute command -> python manage.py runserver.
+step-4) Paste this url in your browser -> http://127.0.0.1:8000/.
+step-5) Signup and login with valid credentials.
+step-6) Then click on 'click here' hyperlink to open feedback form.
+step-7) Fill feedback form and submit.
+step-8) If you login as a admin then admin tab will appear in navbar.
+step-9) Click on Admin
+step-10) Visualization of ratings will be displayed.

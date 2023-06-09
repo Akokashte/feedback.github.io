@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Alumni Feedback{% endblock title %}
+{% block body %}
+<div class="container">
+    <!-- Content here -->
+    <h2 class="text-center mt-4 ">Alumni Feedback</h2><br>
+    <form action="/alumnifeedback" method="post">
+        {% csrf_token %}
+
+    <div class="mt-3">
+        <label for="exampleFormControlInput1 " class="form-label" >Name</label>
+        <input type="text" class="form-control" name="name" placeholder="Enter your name" required>
+    </div><br>
+
+    <div class="mt-3">
+        <label for="exampleFormControlInput1 " class="form-label" >Passout Year</label>
+        <input type="number" class="form-control" name="passout_year" placeholder="Enter your year of passout" required>
+    </div><br>
+
+    <div class="mt-3">
+        <label for="exampleFormControlInput1 " class="form-label" >Department</label>
+        <input type="text" class="form-control" name="department" placeholder="Enter your department" required>
+    </div><br>
+
+    <div class="mt-3">
+        <label for="exampleFormControlInput1 " class="form-label" >Email address</label>
+        <input type="email" class="form-control" name="email" placeholder="Enter your email" required>
+    </div><br>
+
+    <div class="mt-3">
+        <label for="exampleFormControlInput1 " class="form-label" >Comments</label>
+        <input type="text" class="form-control" name="comments" placeholder="Type your thoughts here" required>
+    </div><br>
+
+      <button type="submit" class="btn btn-primary mt-3 mb-2">Submit</button>
+  </div>
+  </form>
+{% endblock %}

@@ -1,0 +1,511 @@
+{% extends 'base.html' %}
+{% block title %}Feedback BE Computer - Sem VIII{% endblock title %}
+{% block body %}
+
+<div class="container-fluid px-0 mb-3 text-white" style="font-family: 'Baloo Da 2', cursive;">
+    <h2 class="text-center mt-3">Semester Feedback Form</h2>
+    <h4 class="text-center mt-3">BE Computer - Sem VIII Practical</h4>
+</div>
+
+<div class="container py-4 text-black" style="font-family: 'Baloo Da 2', cursive; font-size: 1.2rem;">
+    <form action="/save_responses" method="post">
+        {% csrf_token %}
+
+        <input type="text" value="practical" name="form_type" hidden>
+        <input type="text" value="2022-23" name="academic_year" hidden>
+        <input type="text" value="viii" name="semester" hidden>
+        <input type="text" value="computer" name="branch" hidden>
+        <input type="text" value="be" name="year" hidden>
+
+        <!-- Practical No 1 -->
+        <div class="card mx-auto" style="width: 15rem;">
+            <img src='static/dnlondhe.jpg' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Sub : </strong>Human Machine Interaction Lab</h5>
+                <input type="text" value="Human Machine Interaction Lab" name="p1_subject_name" hidden>
+                <p class="card-text fw-bold">Prof. Dattatraya Nanabhau Londhe</p>
+                <input type="text" value="Prof. Dattatraya Nanabhau Londhe" name="p1_teacher_name" hidden>
+            </div>
+        </div>
+
+        <label for="sel1" class="form-name mt-3 text-white">Q1. Are connections between practical work in practical classes and theoretical background during theory classes really happen?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel1" name="p1_q1" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel2" class="form-name mt-3 text-white">Q2. Are the practical's runs smoothly according to university syllabus?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel2" name="p1_q2" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+
+        <label for="sel3" class="form-name mt-3 text-white">Q3. How approachable is the teacher in practical classes?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel3" name="p1_q3" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel4" class="form-name mt-3 text-white">Q4. How well does the teacher succeed in stimulating and sustaining student's interest in practical work?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel4" name="p1_q4" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel5" class="form-name mt-3 text-white">Q5. How successful is the teacher in responding the questions and queries promptly and effectively?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel5" name="p1_q5" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel6" class="form-name mt-3 text-white">Q6. How effective is the teacher in evaluating the practical work?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel6" name="p1_q6" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel7" class="form-name mt-3 text-white">Q7. Overall, how you are satisfied with the conduct of practical's?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel7" name="p1_q7" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <div class="mb-3 mt-3">
+            <label for="exampleFormControlTextarea1" class="form-label text-white">Any suggestions</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="p1_suggestion"></textarea>
+        </div>
+
+
+
+        <!-- Practical No 2 -->
+        <div class="card mx-auto" style="width: 15rem;">
+            <img src='static/nairsir.jpg' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Sub : </strong>Distributed Computing Lab</h5>
+                <input type="text" value="Distributed Computing Lab" name="p2_subject_name" hidden>
+                <p class="card-text fw-bold">Prof. Vijesh Nair</p>
+                <input type="text" value="Prof. Vijesh Nair" name="p2_teacher_name" hidden>
+            </div>
+        </div>
+
+        <label for="sel1" class="form-name mt-3 text-white">Q1. Are connections between practical work in practical classes and theoretical background during theory classes really happen?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel1" name="p2_q1" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel2" class="form-name mt-3 text-white">Q2. Are the practical's runs smoothly according to university syllabus?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel2" name="p2_q2" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+
+        <label for="sel3" class="form-name mt-3 text-white">Q3. How approachable is the teacher in practical classes?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel3" name="p2_q3" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel4" class="form-name mt-3 text-white">Q4. How well does the teacher succeed in stimulating and sustaining student's interest in practical work?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel4" name="p2_q4" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel5" class="form-name mt-3 text-white">Q5. How successful is the teacher in responding the questions and queries promptly and effectively?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel5" name="p2_q5" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel6" class="form-name mt-3 text-white">Q6. How effective is the teacher in evaluating the practical work?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel6" name="p2_q6" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel7" class="form-name mt-3 text-white">Q7. Overall, how you are satisfied with the conduct of practical's?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel7" name="p2_q7" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <div class="mb-3 mt-3">
+            <label for="exampleFormControlTextarea1" class="form-label text-white">Any suggestions</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="p2_suggestion"></textarea>
+        </div>
+
+
+
+        <!-- Practical No 3 -->
+        <div class="card mx-auto" style="width: 15rem;">
+            <img src='static/mc.jpg' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Sub : </strong>High Performance Computing Lab</h5>
+                <input type="text" value="High Performance Computing Lab" name="p3_subject_name" hidden>
+                <p class="card-text fw-bold">Prof. S. D. Latkar</p>
+                <input type="text" value="Prof. S. D. Latkar" name="p3_teacher_name" hidden>
+            </div>
+        </div>
+
+        <label for="sel1" class="form-name mt-3 text-white">Q1. Are connections between practical work in practical classes and theoretical background during theory classes really happen?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel1" name="p3_q1" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel2" class="form-name mt-3 text-white">Q2. Are the practical's runs smoothly according to university syllabus?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel2" name="p3_q2" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+
+        <label for="sel3" class="form-name mt-3 text-white">Q3. How approachable is the teacher in practical classes?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel3" name="p3_q3" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel4" class="form-name mt-3 text-white">Q4. How well does the teacher succeed in stimulating and sustaining student's interest in practical work?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel4" name="p3_q4" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel5" class="form-name mt-3 text-white">Q5. How successful is the teacher in responding the questions and queries promptly and effectively?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel5" name="p3_q5" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel6" class="form-name mt-3 text-white">Q6. How effective is the teacher in evaluating the practical work?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel6" name="p3_q6" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel7" class="form-name mt-3 text-white">Q7. Overall, how you are satisfied with the conduct of practical's?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel7" name="p3_q7" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <div class="mb-3 mt-3">
+            <label for="exampleFormControlTextarea1" class="form-label text-white">Any suggestions</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="p3_suggestion"></textarea>
+        </div>
+
+
+
+        <!-- Practical No 4 -->
+        <div class="card mx-auto" style="width: 15rem;">
+            <img src='static/ip.jpg' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Sub : </strong>Computational Lab</h5>
+                <input type="text" value="Computational Lab" name="p4_subject_name" hidden>
+                <p class="card-text fw-bold">Prof. Mahesh Khandke</p>
+                <input type="text" value="Prof. Mahesh Khandke" name="p4_teacher_name" hidden>
+            </div>
+        </div>
+
+        <label for="sel1" class="form-name mt-3 text-white">Q1. Are connections between practical work in practical classes and theoretical background during theory classes really happen?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel1" name="p4_q1" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel2" class="form-name mt-3 text-white">Q2. Are the practical's runs smoothly according to university syllabus?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel2" name="p4_q2" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+
+        <label for="sel3" class="form-name mt-3 text-white">Q3. How approachable is the teacher in practical classes?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel3" name="p4_q3" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel4" class="form-name mt-3 text-white">Q4. How well does the teacher succeed in stimulating and sustaining student's interest in practical work?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel4" name="p4_q4" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel5" class="form-name mt-3 text-white">Q5. How successful is the teacher in responding the questions and queries promptly and effectively?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel5" name="p4_q5" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel6" class="form-name mt-3 text-white">Q6. How effective is the teacher in evaluating the practical work?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel6" name="p4_q6" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel7" class="form-name mt-3 text-white">Q7. Overall, how you are satisfied with the conduct of practical's?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel7" name="p4_q7" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <div class="mb-3 mt-3">
+            <label for="exampleFormControlTextarea1" class="form-label text-white">Any suggestions</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="p4_suggestion"></textarea>
+        </div>
+
+
+
+        <!-- Practical No 5 -->
+        <div class="card mx-auto" style="width: 15rem;">
+            <img src='static/sameersir.jpg' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Sub : </strong>Project Management Lab</h5>
+                <input type="text" value="Project Management Lab" name="p5_subject_name" hidden>
+                <p class="card-text fw-bold">Prof. Sameer Tathare</p>
+                <input type="text" value="Prof. Sameer Tathare" name="p5_teacher_name" hidden>
+            </div>
+        </div>
+
+        <label for="sel1" class="form-name mt-3 text-white">Q1. Are connections between practical work in practical classes and theoretical background during theory classes really happen?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel1" name="p5_q1" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel2" class="form-name mt-3 text-white">Q2. Are the practical's runs smoothly according to university syllabus?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel2" name="p5_q2" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+
+        <label for="sel3" class="form-name mt-3 text-white">Q3. How approachable is the teacher in practical classes?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel3" name="p5_q3" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel4" class="form-name mt-3 text-white">Q4. How well does the teacher succeed in stimulating and sustaining student's interest in practical work?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel4" name="p5_q4" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel5" class="form-name mt-3 text-white">Q5. How successful is the teacher in responding the questions and queries promptly and effectively?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel5" name="p5_q5" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel6" class="form-name mt-3 text-white">Q6. How effective is the teacher in evaluating the practical work?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel6" name="p5_q6" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel7" class="form-name mt-3 text-white">Q7. Overall, how you are satisfied with the conduct of practical's?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel7" name="p5_q7" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <div class="mb-3 mt-3">
+            <label for="exampleFormControlTextarea1" class="form-label text-white">Any suggestions</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="p5_suggestion"></textarea>
+        </div>
+
+        <!-- Mini - Project -->
+        <div class="card mx-auto" style="width: 15rem;">
+            <img src='static/ip.jpg' class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><strong>Sub : </strong>Major - Project 2</h5>
+                <input type="text" value="Major - Project 2" name="project_name" hidden>
+                <p class="card-text fw-bold">Prof. Mahesh Khandke</p>
+                <input type="text" value="Prof. Mahesh Khandke" name="project_teacher_name" hidden>
+            </div>
+        </div>
+
+        <label for="sel1" class="form-name mt-3 text-white">Q1. Are connections between practical work in practical classes and theoretical background during theory classes really happen?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel1" name="project_q1" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel2" class="form-name mt-3 text-white">Q2. Are the practical's runs smoothly according to university syllabus?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel2" name="project_q2" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+
+        <label for="sel3" class="form-name mt-3 text-white">Q3. How approachable is the teacher in practical classes?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel3" name="project_q3" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel4" class="form-name mt-3 text-white">Q4. How well does the teacher succeed in stimulating and sustaining student's interest in practical work?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel4" name="project_q4" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel5" class="form-name mt-3 text-white">Q5. How successful is the teacher in responding the questions and queries promptly and effectively?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel5" name="project_q5" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel6" class="form-name mt-3 text-white">Q6. How effective is the teacher in evaluating the practical work?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel6" name="project_q6" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <label for="sel7" class="form-name mt-3 text-white">Q7. Overall, how you are satisfied with the conduct of practical's?</label>
+        <select class="form-select" multiple aria-label="multiple select example" id="sel7" name="project_q7" required>
+            <option selected value="5">Excellent</option>
+            <option value="4">Very good</option>
+            <option value="3">Good</option>
+            <option value="2">Average</option>
+            <option value="1">Below Average</option>
+        </select>
+
+        <div class="mb-3 mt-3">
+            <label for="exampleFormControlTextarea1" class="form-label text-white">Any suggestions</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="project_suggestion"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock body %}
